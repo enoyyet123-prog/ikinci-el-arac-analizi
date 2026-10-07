@@ -26,7 +26,7 @@ st.markdown('<h1 translate="no">🚗 İkinci El Araç Piyasası Profesyonel Anal
 # 1. VERİYİ YÜKLE VE TEMİZLE
 @st.cache_data
 def load_and_clean_data():
-    df = pd.read_csv(r'C:\Users\USER\Desktop\arac_projesi\arac_verisi.csv')
+    df = pd.read_csv('arac_verisi.csv')
     df.columns = df.columns.str.strip().str.lower()
     
     df = df.dropna(subset=['fiyat', 'marka', 'seri', 'yil', 'kilometre'])
